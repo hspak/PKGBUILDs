@@ -7,10 +7,10 @@ pkgdesc="A simple fan control daemon for ThinkPads"
 arch=('i686' 'x86_64')
 url="http://github.com/hspasta/simpfand"
 license=('GPLv3')
-depends=('' )
+depends=()
 makedepends=('git')
-conflicts=('')
-provides=('')
+conflicts=()
+provides=()
 install=simpfand-git.install
 
 _gitroot="git://github.com/hspasta/simpfand.git"
