@@ -1,16 +1,16 @@
 # Maintainer: Hong Shick Pak  hongshick.pak@gmail.com
 
-pkgname=simpfand
+pkgname=simpfand-git
 pkgver=20120925
-pkgrel=1
+pkgrel=2
 pkgdesc="A simple fan control daemon for ThinkPads"
 arch=('i686' 'x86_64')
 url="http://github.com/hspasta/simpfand"
-license=('GNU3')
+license=('GPLv3')
 depends=('' )
 makedepends=('git')
 conflicts=('')
-provides=('simpfand')
+provides=('')
 
 _gitroot="git://github.com/hspasta/simpfand.git"
 _gitname="simpfand"
@@ -36,7 +36,7 @@ build() {
 }
 
 package() {
-  install -D -m644 "$srcdir/simpfand.systemd" "$pkgdir/usr/lib/systemd/system/simpfand.service"
+  install -D -m644 "$srcdir/simpfand/simpfand.systemd" "$pkgdir/usr/lib/systemd/system/simpfand.service"
   
   make -C "$srcdir/$_gitname-build" PREFIX=/usr DESTDIR="$pkgdir" install
 }
