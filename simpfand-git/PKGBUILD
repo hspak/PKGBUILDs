@@ -11,6 +11,7 @@ depends=()
 makedepends=('git')
 conflicts=()
 provides=()
+backup=('etc/conf.d/simpfand')
 install=simpfand-git.install
 
 _gitroot="git://github.com/hspasta/simpfand.git"
