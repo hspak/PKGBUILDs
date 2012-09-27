@@ -8,6 +8,7 @@ arch=('i686' 'x86_64')
 url="http://github.com/hspasta/simpfand"
 license=('GPLv3')
 depends=()
+conflicts=('simpfand-git')
 makedepends=('git')
 backup=('etc/conf.d/simpfand')
 source=("https://github.com/downloads/hspasta/$pkgname/$pkgname-$pkgver-$pkgrel.tar.gz")
