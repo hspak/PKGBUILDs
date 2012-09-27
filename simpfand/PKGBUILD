@@ -1,0 +1,27 @@
+# Maintainer: Hong Shick Pak  hongshick.pak@gmail.com
+
+pkgname=simpfand
+pkgver=1
+pkgrel=1
+pkgdesc="A simple fan control daemon for ThinkPads"
+arch=('i686' 'x86_64')
+url="http://github.com/hspasta/simpfand"
+license=('GPLv3')
+depends=()
+makedepends=('git')
+backup=('etc/conf.d/simpfand')
+source=("https://github.com/downloads/hspasta/$pkgname/$pkgname-$pkgver-$pkgrel.tar.gz")
+md5sums=('1e4ed48ea588931eb7ee237ed4c6a749')
+install=simpfand.install
+
+build() {
+  make -C "$pkgname-$pkgver-$pkgrel"
+}
+
+package() {
+  install -D -m644 "$srcdir/simpfand-$pkgver-$pkgrel/simpfand.systemd" "$pkgdir/usr/lib/systemd/system/simpfand.service"
+  
+  make -C "$pkgname-$pkgver-$pkgrel" PREFIX=/usr DESTDIR="$pkgdir" install
+}
+
+# vim: ft=sh syn=sh et
