@@ -2,7 +2,7 @@
 
 pkgname=simpfand-git
 pkgver=20121030
-pkgrel=2
+pkgrel=1
 pkgdesc="A simple fan control daemon for ThinkPads"
 arch=('i686' 'x86_64')
 url="http://github.com/hspasta/simpfand"
