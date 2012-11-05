@@ -1,7 +1,7 @@
 # Maintainer: Hong Shick Pak  hongshick.pak@gmail.com
 
 pkgname=simpfand
-pkgver=2.0
+pkgver=3.0
 pkgrel=1
 pkgdesc="A simple fan control daemon for ThinkPads"
 arch=('i686' 'x86_64')
@@ -12,7 +12,7 @@ conflicts=('simpfand-git')
 makedepends=('git')
 backup=('share/doc/simpfand/simpfand')
 source=("https://github.com/downloads/hspasta/$pkgname/$pkgname-$pkgver.tar.gz")
-md5sums=('7b4939139e0d4a6ca4a039bce601deb1')
+md5sums=('25034053e1de6a5cb19ff948cfbfdd59')
 install=simpfand.install
 
 build() {
