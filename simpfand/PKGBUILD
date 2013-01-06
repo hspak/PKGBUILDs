@@ -11,7 +11,8 @@ depends=()
 conflicts=('simpfand-git')
 makedepends=('git')
 backup=('share/doc/simpfand/simpfand')
-source=("https://github.com/downloads/hspasta/$pkgname/$pkgname-$pkgver.tar.gz")
+# https://nodeload.github.com/hspasta/simpfand/tar.gz/v3.0
+source=("https://nodeload.github.com/hspasta/$pkgname/tar.gz/v$pkgver")
 md5sums=('25034053e1de6a5cb19ff948cfbfdd59')
 install=simpfand.install
 
@@ -21,7 +22,7 @@ build() {
 
 package() {
   install -D -m644 "$srcdir/simpfand-$pkgver/simpfand.systemd" "$pkgdir/usr/lib/systemd/system/simpfand.service"
-  
+
   make -C "$pkgname-$pkgver" PREFIX=/usr DESTDIR="$pkgdir" install
 }
 
