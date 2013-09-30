@@ -12,7 +12,6 @@ makedepends=('git')
 conflicts=('simpfand')
 provides=('simpfand')
 source=("git://github.com/hspasta/simpfand")
-backup=('share/doc/simpfand/simpfand.conf')
 install=simpfand-git.install
 md5sums=('SKIP')
 
