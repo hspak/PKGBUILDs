@@ -26,6 +26,7 @@ build() {
 
 package() {
   make -C simpfand PREFIX=/usr DESTDIR="$pkgdir" install
+  install -D -m644 "${srcdir}/simpfand/simpfand.systemd" "${pkgdir}/usr/lib/systemd/system/simpfand.service"
 }
 
 # vim: ft=sh syn=sh et
