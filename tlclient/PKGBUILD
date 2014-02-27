@@ -3,7 +3,7 @@
 pkgname=tlclient
 pkgver=4.1.1_4137
 pkgrel=3
-pkgdesc="Thinlinc client software for remote desktop"
+pkgdesc="ThinLinc client software for remote desktop"
 arch=('x86_64')
 url="https://www.cendio.com/products/thinlinc/"
 license=('custom')
