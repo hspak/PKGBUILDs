@@ -2,7 +2,7 @@
 
 pkgname=tlclient
 pkgver=4.1.1_4137
-pkgrel=2
+pkgrel=3
 pkgdesc="Thinlinc client software for remote desktop"
 arch=('x86_64')
 url="https://www.cendio.com/products/thinlinc/"
@@ -15,5 +15,5 @@ package() {
   cp -dpr --no-preserve=ownership "$basedir" "$pkgdir/usr"
 
   # copy license into proper directory
-  install -m644 -D "$basedir/lib/tlclient/EULA.txt" "$pkgdir/usr/share/license/tlclient/LICENSE"
+  install -m644 -D "$basedir/lib/tlclient/EULA.txt" "$pkgdir/usr/share/license/$pkgname/LICENSE"
 }
