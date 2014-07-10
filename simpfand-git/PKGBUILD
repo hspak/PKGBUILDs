@@ -17,7 +17,7 @@ md5sums=('SKIP')
 
 pkgver() {
   cd 'simpfand'
-  git describe --tags | sed 's/-/./g'
+  git describe | sed 's/-/./g'
 }
 
 build() {
