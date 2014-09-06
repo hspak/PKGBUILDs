@@ -1,7 +1,7 @@
 # Maintainer: Hong Shick Pak <hong@hspak.com>
 
 pkgname=simpfand-go
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc="A simple fan control daemon for ThinkPads (go port)"
 arch=('x86_64')
@@ -13,7 +13,7 @@ conflicts=('simpfand')
 provides=('simpfand')
 source=("https://github.com/hspak/${pkgname}/archive/${pkgver}.tar.gz")
 install=simpfand-git.install
-md5sums=(e0c06fce54e1bbb70e109ce7f01416dc)
+md5sums=(2e24c5020cc28a2adc38045b16166f37)
 
 build() {
   cd "$pkgname-$pkgver"
