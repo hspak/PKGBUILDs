@@ -1,7 +1,7 @@
 # Maintainer: Hong Shick Pak <hong@hspak.com>
 
 pkgname=simpfand-git
-pkgver=v3.2.3-g1502886
+pkgver=v4.0
 pkgrel=1
 pkgdesc="A simple fan control daemon for ThinkPads"
 arch=('i686' 'x86_64')
@@ -26,7 +26,7 @@ build() {
 
 package() {
   make -C simpfand PREFIX=/usr DESTDIR="$pkgdir" install
-  install -D -m644 "${srcdir}/simpfand/simpfand.systemd" "${pkgdir}/usr/lib/systemd/system/simpfand.service"
+  install -D -m644 "${srcdir}/simpfand/simpfand.service" "${pkgdir}/usr/lib/systemd/system/simpfand.service"
   install -D -m755 "${srcdir}/simpfand/restart-simpfand.sh" "${pkgdir}/usr/lib/systemd/system-sleep/restart-simpfand.sh"
 
   # license
